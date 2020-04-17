@@ -1,89 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Comic+Neue|Concert+One|Passion+One|Press+Start+2P&display=swap');
 
 * {
     padding: 0;
     margin:  0;
-    box-sizing: border-box;
+    font-family: 'Comic Neue', cursive;   
 }
-
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
-    background-color: #153b76;
+    background-color: #0a1627;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
-
-.clock {
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+}
+.clock1 {   
     width: 350px;
     height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff url(clock.png);
-    border-radius: 50%;
-    border: 5px sold rgb(189, 10, 10);
-    box-shadow: inset 0 0 25px #002765;
-    background-size: cover;
-    
-    
-    
+    background: rgb(222, 237, 250) url(clock.png);
+    border-radius: 50%;    
+    box-shadow:  0 0 25px #2052a1;
+    background-size: cover; 
 }
-.clock::before {
+.clock1::before {
     content: '';
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color:#6c7385;
-    border: 3px solid#6c7385;
+    background-color:#08285a;
+    border: 3px solid #11356e;
     z-index: 10000;
     border-radius: 50%;
 }
-
-.hour, .minute, .seconds {
+.hours1, .minutes1, .seconds1 {
     position: absolute;
 }
-
-.hour, .hr {
+.hours1, .hour {
     width: 180px;
     height: 180px;
 }
-
-.minute, .mn {
+.minutes1, .min {
     width: 210px;
     height: 210px;
 }
-.seconds, .sc {
+.seconds1, .sec {
     width: 240px;
     height: 240px;
 }
-.hr, .mn, .sc {
+.hour, .min, .sec {
     display: flex;
     justify-content: center;
     position: absolute;
     border-radius: 50%;
 }
-
-.hr::before {
+.hour::before {
     content: '';
     position: absolute;
     width: 10px;
     height: 90px;
-    background-color: #c7c7c8;
+    background-color: #050507;
     border-radius: 5px 5px 0 0;
     z-index: 1;
 }
-
-.mn::before {
+.min::before {
     content: '';
     position: absolute;
     width: 8px;
     height: 115px;
-    background-color: #c7c7c8;
+    background-color: #2e2e2e;
     border-radius: 5px 5px 0 0;
     z-index: 2;
 }
-
-.sc::before {
+.sec::before {
     content: '';
     position: absolute;
     width: 3px;
@@ -92,91 +96,74 @@ body {
     border-radius: 2px 2px 0 0;
     z-index: 3;
 }
+.digitalClock-container {
+    display: flex;
+    margin-top: 8rem;
+    font-family: Electrolize;
+    text-shadow: rgb(255, 0, 85);
+}
+#digital-clock{
+    font-size: 100px;
+    color: chartreuse;
+    text-shadow: 5px 5px 12px rgb(50, 99, 1);
+}
+#digital-hours, #digital-mins, #digital-secs {
+    color: chartreuse;
+    font-size: 100px;
+}
+#date-display{
+    color: rgb(222, 237, 250);
+    margin: 5rem;
+    font-size: 3rem;
+}
 
-@media only screen 
-and (min-device-width : 250px) 
-and (max-device-width : 4800px) {
-    .clock {
-        width: 200px;
-        height: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #fff url(clock.png);
-        border-radius: 50%;
-        border: 5px sold rgb(189, 10, 10);
-        box-shadow: inset 0 0 15px #002765;
-        background-size: cover;
-        
-        
-        
+@media  (max-width : 450px) {
+    .container {
+        margin-top: 3rem;
     }
-    .clock::before {
-        content: '';
-        position: absolute;
+    .clock1 {
+        width: 250px;
+        height: 250px;       
+    }
+    .clock1::before {
         width: 15px;
-        height: 15px;
-        background-color:#6c7385;
-        border: 1px solid#6c7385;
-        z-index: 10000;
-        border-radius: 50%;
+        height: 15px;   
+    } 
+    .hours1, .hour {
+        width: 140px;
+        height: 140px;
+    }  
+    .minutes1, .min {
+        width: 150px;
+        height: 175px;
     }
-    
-    .hour, .minute, .seconds {
-        position: absolute;
+    .seconds1, .sec {
+        width: 150px;
+        height: 225px;
     }
-    
-    .hour, .hr {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .minute, .mn {
-        width: 119px;
-        height: 119px;
-    }
-    .seconds, .sc {
-        width: 136px;
-        height: 136px;
-    }
-    .hr, .mn, .sc {
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        border-radius: 50%;
-    }
-    
-    .hr::before {
-        content: '';
-        position: absolute;
+    .hour::before {     
         width: 5px;
-        height: 51px;
-        background-color: #c7c7c8;
-        border-radius: 5px 5px 0 0;
-        z-index: 1;
-    }
-    
-    .mn::before {
-        content: '';
-        position: absolute;
+        height: 75px;  
+    }   
+    .min::before {
         width: 4px;
-        height: 65px;
-        background-color: #c7c7c8;
-        border-radius: 5px 5px 0 0;
-        z-index: 2;
-    }
-    
-    .sc::before {
-        content: '';
-        position: absolute;
+        height: 90px;
+    }   
+    .sec::before {
         width: 2px;
-        height: 85px;
-        background-color:#f8004b;
-        border-radius: 2px 2px 0 0;
-        z-index: 3;
+        height: 128px;
     }
-    
-    
-    
-
+    .digitalClock-container {   
+        margin-top: 4em;      
+    }
+    #digital-clock{
+        font-size: 50px;    
+    }
+    #digital-hours, #digital-mins, #digital-secs {   
+        font-size: 50px;
+    }
+    #date-display{       
+        margin: 2.5rem;
+        font-size: 1.6rem;
+    }
 }
