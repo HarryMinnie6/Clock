@@ -7,18 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="clock" >
-        <div class="hour">        
-            <div class="hr" id="hr"></div>
+    <!-- analog clock -->
+    <div class="site-wrapper">
+        <div class="container">
+            <div class="clock1" >
+                <div class="hours1">        
+                    <div class="hour" id="hour"></div>
+                </div>
+                <div class="minutes1">        
+                    <div class="min" id="min"></div>
+                </div>
+                <div class="seconds1">        
+                    <div class="sec" id="sec"></div>
+                </div>
+            </div> 
         </div>
-        <div class="minute">        
-            <div class="mn" id="mn"></div>
-        </div>
-        <div class="seconds">        
-            <div class="sc" id="sc"></div>
-        </div>
-    </div>  
-
+        <div class="digitalClock-container">  
+            <div id="digital-clock">
+               <span id="digital-hours">hours</span> :
+               <span id="digital-mins">mins</span> :
+               <span id="digital-secs">secs</span>          
+           </div>
+       </div>
+       <div class="date-container">  
+        <div id="date">
+           <div id="date-display">d</div>          
+       </div>
+   </div>
+    </div>
     <script src="script.js"></script>
     
 </body>
